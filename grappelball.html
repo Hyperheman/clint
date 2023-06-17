@@ -1,0 +1,14 @@
+#!/bin/bash
+su
+cd /
+mkdir clintapps
+cd clintapps
+mkdir lua
+cd lua
+echo y | pacman -Sy base-devel
+echo y | curl -R -O http://www.lua.org/ftp/lua-5.4.4.tar.gz
+echo y | tar zxf lua-5.4.4.tar.gz
+echo y | cd lua-5.4.4
+echo y | make linux test
+echo y | sudo make install
+clear
