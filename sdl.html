@@ -1,0 +1,11 @@
+su
+cd /
+mkdir sdl
+cd sdl
+echo y | git clone https://github.com/libsdl-org/SDL.git -b SDL2
+echo y | cd SDL
+echo y | mkdir build
+echo y | cd build
+echo y | ../configure
+echo y | make
+echo y | sudo make install
